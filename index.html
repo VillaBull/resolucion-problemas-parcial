@@ -25,6 +25,8 @@
 
     <button onclick="multiplicar()">multiplicar</button>
 
+    <button onclick="dividir()">dividir</button>
+
     <label for="resultado">El resultado es:</label>
     <input type="number" id="resultado" name="resultado"><br> 
 
@@ -55,8 +57,8 @@
         }
     </script>
 
-<script>
-    function restar(){
+    <script>
+        function restar(){
         var a = document.getElementById("a").value;
         var b = document.getElementById("b").value;
         var resultado;
@@ -80,10 +82,10 @@
 
         document.getElementById("resultado").value = resultado
     }
-</script>
+    </script>
 
-<script>
-    function multiplicar(){
+    <script>
+        function multiplicar(){
         var a = document.getElementById("a").value;
         var b = document.getElementById("b").value;
         var resultado;
@@ -107,7 +109,35 @@
 
         document.getElementById("resultado").value = resultado
     }
-</script>
+    </script>
+
+    <script>
+    function dividir(){
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    var resultado;
+
+
+    if(a == "") {
+        a = 0
+    }else{
+        a = parseInt(a);
+    }
+
+    if(b == "") {
+        b = 0
+    }else{
+        b = parseInt(b);
+    }
+    
+
+    
+    resultado = a / b;
+
+    document.getElementById("resultado").value = resultado
+    }   
+    </script>
+
 
 
 </body>
