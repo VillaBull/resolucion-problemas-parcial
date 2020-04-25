@@ -17,8 +17,11 @@
     <label for="a">ingrese el primer numero</label>
     <input type="number" id="a" name="a"><br>
     <label for="b">ingrese el segundo numero</label>
-    <input type="number" id="b" name="b"><br>   
-    <button onclick="sumar()">sumar</button><br>
+    <input type="number" id="b" name="b"><br>
+    
+    <button onclick="sumar()">sumar</button>
+
+    <button onclick="restar()">restar</button>
 
     <label for="resultado">El resultado es:</label>
     <input type="number" id="resultado" name="resultado"><br> 
@@ -49,6 +52,33 @@
             document.getElementById("resultado").value = resultado
         }
     </script>
+
+<script>
+    function restar(){
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var resultado;
+
+
+        if(a == "") {
+            a = 0
+        }else{
+            a = parseInt(a);
+        }
+
+        if(b == "") {
+            b = 0
+        }else{
+            b = parseInt(b);
+        }
+        
+
+        
+        resultado = a - b;
+
+        document.getElementById("resultado").value = resultado
+    }
+</script>
 
 
 </body>
